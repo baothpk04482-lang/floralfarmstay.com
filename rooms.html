@@ -3,235 +3,131 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Phòng Nghỉ & Lều Trại - Floral Farm</title>
+    <title>Phòng Nghỉ - Floral Farm</title>
     
     <script src="https://cdn.tailwindcss.com"></script>
-    
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
-    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        rustic: {
-                            light: '#F5F5DC',
-                            DEFAULT: '#8D7B68',
-                            dark: '#5D5C61',
-                            green: '#4A5D23',
-                            accent: '#C8A165'
-                        }
-                    },
-                    fontFamily: {
-                        serif: ['"Playfair Display"', 'serif'],
-                        body: ['"Lora"', 'serif'],
-                    }
-                }
-            }
-        }
-    </script>
-
-    <style>
-        body { font-family: 'Lora', serif; background-color: #FAF9F6; scroll-behavior: smooth; }
-        h1, h2, h3, h4 { font-family: 'Playfair Display', serif; }
-        
-        /* Hiệu ứng zoom ảnh khi hover */
-        .room-card:hover .room-img { transform: scale(1.1); }
-        .room-img { transition: transform 0.5s ease; }
-    </style>
-</head>
+    <script src="assets/js/tailwind-cfg.js"></script> <link rel="stylesheet" href="assets/css/style.css"> </head>
 <body class="text-gray-700 antialiased flex flex-col min-h-screen">
 
     <header id="main-header" class="fixed w-full top-0 z-50 bg-rustic-dark shadow-md text-white py-2 px-4 transition-all">
         <div class="container mx-auto flex justify-between items-center">
             <a href="index.html" class="text-2xl md:text-3xl font-bold tracking-wider flex items-center gap-2">
-                <i class="fa-solid fa-leaf text-rustic-accent"></i> Floral Farm
+                <i class="fa-solid fa-leaf text-rustic-green"></i> Floral Farm
             </a>
-
             <nav class="hidden md:flex space-x-8 items-center text-lg">
-                <a href="index.html" class="hover:text-rustic-accent transition duration-300">Trang Chủ</a>
-                <a href="about.html" class="hover:text-rustic-accent transition duration-300">Về Chúng Tôi</a>
-                <a href="rooms.html" class="text-rustic-accent border-b-2 border-rustic-accent transition duration-300">Phòng Nghỉ</a>
-                <a href="contact.html" class="hover:text-rustic-accent transition duration-300">Liên Hệ</a>
+                <a href="index.html" class="hover:text-rustic-green transition duration-300">Trang Chủ</a>
+                <a href="about.html" class="hover:text-rustic-green transition duration-300">Về Chúng Tôi</a>
+                <a href="rooms.html" class="text-rustic-green border-b-2 border-rustic-green transition duration-300">Phòng Nghỉ</a>
+                <a href="contact.html" class="hover:text-rustic-green transition duration-300">Liên Hệ</a>
                 <a href="contact.html" class="bg-rustic-green hover:bg-opacity-90 text-white px-5 py-2 rounded-full text-base transition transform hover:scale-105">
                     Đặt Phòng
                 </a>
             </nav>
-
             <button id="mobile-menu-btn" class="md:hidden text-2xl focus:outline-none">
                 <i class="fa-solid fa-bars"></i>
             </button>
         </div>
-         <div id="mobile-menu" class="hidden md:hidden bg-rustic-dark absolute top-full left-0 w-full shadow-lg border-t border-gray-700">
+        
+        <div id="mobile-menu" class="hidden md:hidden bg-rustic-dark absolute top-full left-0 w-full shadow-lg border-t border-gray-700">
             <div class="flex flex-col p-4 space-y-4 text-center">
-                <a href="index.html" class="block hover:text-rustic-accent">Trang Chủ</a>
-                <a href="about.html" class="block hover:text-rustic-accent">Về Chúng Tôi</a>
-                <a href="rooms.html" class="block text-rustic-accent font-bold">Phòng Nghỉ</a>
-                <a href="contact.html" class="block hover:text-rustic-accent">Liên Hệ</a>
+                <a href="index.html" class="block hover:text-rustic-green">Trang Chủ</a>
+                <a href="about.html" class="block hover:text-rustic-green">Về Chúng Tôi</a>
+                <a href="rooms.html" class="block text-rustic-green font-bold">Phòng Nghỉ</a>
+                <a href="contact.html" class="block hover:text-rustic-green">Liên Hệ</a>
             </div>
         </div>
     </header>
 
     <section class="pt-32 pb-16 bg-rustic-light/50 text-center px-4 relative">
-        <i class="fa-brands fa-pagelines absolute top-24 left-10 text-9xl text-rustic-green opacity-5 -z-10 rotate-45"></i>
-        
-        <h1 class="text-4xl md:text-5xl font-bold text-rustic-dark mb-4">Hệ Thống Phòng Nghỉ</h1>
+        <h1 class="text-4xl md:text-5xl font-bold text-rustic-dark mb-4">Phòng Nghỉ & Glamping</h1>
         <p class="text-lg text-gray-600 max-w-2xl mx-auto italic">
-            "Mỗi căn phòng là một tổ ấm nhỏ giữa thiên nhiên, nơi bạn được đánh thức bởi ánh nắng và tiếng chim ca."
+            "Mỗi căn phòng là một góc nhỏ bình yên, nơi bạn lắng nghe hơi thở của núi rừng."
         </p>
     </section>
 
-    <section class="py-12 px-4 container mx-auto">
+    <section class="py-16 container mx-auto px-4 mb-auto">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
             
-            <div class="room-card group bg-white rounded-lg shadow-lg overflow-hidden border border-gray-100 flex flex-col">
+            <div class="room-card rounded-lg overflow-hidden shadow-lg group">
                 <div class="relative overflow-hidden h-64">
                     <img src="https://images.unsplash.com/photo-1587061949409-02df41d5bec3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Bungalow Gỗ" class="room-img w-full h-full object-cover">
-                    <div class="absolute top-4 right-4 bg-rustic-accent text-white px-3 py-1 text-sm font-bold rounded">Best Seller</div>
+                    <div class="absolute top-4 right-4 bg-rustic-green text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">
+                        Best Seller
+                    </div>
                 </div>
-                <div class="p-6 flex-1 flex flex-col">
-                    <div class="flex justify-between items-baseline mb-2">
-                        <h3 class="text-2xl font-bold text-rustic-dark">Bungalow Gỗ</h3>
-                        <span class="text-rustic-green font-bold text-lg">800k<span class="text-xs text-gray-500 font-normal">/đêm</span></span>
+                <div class="p-6">
+                    <h3 class="text-2xl font-bold text-rustic-dark mb-2">Bungalow Gỗ Thông</h3>
+                    <div class="flex items-center gap-4 text-sm text-gray-500 mb-4">
+                        <span><i class="fa-solid fa-user-group mr-1"></i> 2 người</span>
+                        <span><i class="fa-solid fa-bed mr-1"></i> 1 giường đôi</span>
                     </div>
-                    <p class="text-gray-500 text-sm mb-4 italic">Phù hợp cho cặp đôi (2 người)</p>
                     <p class="text-gray-600 mb-6 line-clamp-3">
-                        Căn nhà gỗ nhỏ xinh nằm dưới tán thông, view hướng thung lũng. Nội thất hoàn toàn từ gỗ mộc, có bồn tắm gỗ ngâm thảo dược.
+                        Căn nhà gỗ nhỏ nằm dưới tán thông già, có ban công riêng nhìn ra thung lũng. Nội thất ấm cúng với lò sưởi và bồn tắm gỗ.
                     </p>
-                    
-                    <div class="flex gap-4 mb-6 text-gray-400 text-sm border-t border-gray-100 pt-4 mt-auto">
-                        <span title="Giường đôi"><i class="fa-solid fa-bed"></i> 1 Giường</span>
-                        <span title="Bồn tắm"><i class="fa-solid fa-bath"></i> Bồn tắm</span>
-                        <span title="View núi"><i class="fa-solid fa-mountain"></i> View Núi</span>
+                    <div class="flex justify-between items-center border-t border-gray-100 pt-4">
+                        <span class="text-xl font-bold text-rustic-green">800.000₫ <span class="text-sm font-normal text-gray-400">/đêm</span></span>
+                        <a href="contact.html" class="text-rustic-dark font-bold hover:text-rustic-green transition">Chi tiết &rarr;</a>
                     </div>
-
-                    <a href="contact.html" class="block text-center w-full border border-rustic-green text-rustic-green py-3 rounded hover:bg-rustic-green hover:text-white transition uppercase text-sm font-bold tracking-wider">
-                        Xem chi tiết & Đặt phòng
-                    </a>
                 </div>
             </div>
 
-            <div class="room-card group bg-white rounded-lg shadow-lg overflow-hidden border border-gray-100 flex flex-col">
+            <div class="room-card rounded-lg overflow-hidden shadow-lg group">
                 <div class="relative overflow-hidden h-64">
-                    <img src="https://images.unsplash.com/photo-1478131143081-80f7f84ca84d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Lều Glamping" class="room-img w-full h-full object-cover">
+                    <img src="https://images.unsplash.com/photo-1523987355523-c7b5b0dd90a7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Lều Glamping" class="room-img w-full h-full object-cover">
                 </div>
-                <div class="p-6 flex-1 flex flex-col">
-                    <div class="flex justify-between items-baseline mb-2">
-                        <h3 class="text-2xl font-bold text-rustic-dark">Lều Glamping VIP</h3>
-                        <span class="text-rustic-green font-bold text-lg">550k<span class="text-xs text-gray-500 font-normal">/đêm</span></span>
+                <div class="p-6">
+                    <h3 class="text-2xl font-bold text-rustic-dark mb-2">Lều Glamping VIP</h3>
+                    <div class="flex items-center gap-4 text-sm text-gray-500 mb-4">
+                        <span><i class="fa-solid fa-user-group mr-1"></i> 2-3 người</span>
+                        <span><i class="fa-solid fa-campground mr-1"></i> Lều mông cổ</span>
                     </div>
-                    <p class="text-gray-500 text-sm mb-4 italic">Nhóm bạn thân (2-3 người)</p>
                     <p class="text-gray-600 mb-6 line-clamp-3">
-                        Trải nghiệm ngủ lều cao cấp đầy đủ nệm ấm chăn êm. Sáng mở cửa lều là săn mây, tối đốt lửa trại nướng khoai ngay trước lều.
+                        Trải nghiệm ngủ lều sang chảnh đầy đủ tiện nghi. Thích hợp cho các cặp đôi muốn ngắm sao đêm và đón bình minh ngay tại giường.
                     </p>
-                    
-                    <div class="flex gap-4 mb-6 text-gray-400 text-sm border-t border-gray-100 pt-4 mt-auto">
-                        <span><i class="fa-solid fa-campground"></i> Lều Mông Cổ</span>
-                        <span><i class="fa-solid fa-fire"></i> Khu BBQ</span>
-                        <span><i class="fa-solid fa-wifi"></i> Wifi Free</span>
+                    <div class="flex justify-between items-center border-t border-gray-100 pt-4">
+                        <span class="text-xl font-bold text-rustic-green">550.000₫ <span class="text-sm font-normal text-gray-400">/đêm</span></span>
+                        <a href="contact.html" class="text-rustic-dark font-bold hover:text-rustic-green transition">Chi tiết &rarr;</a>
                     </div>
-
-                    <a href="contact.html" class="block text-center w-full border border-rustic-green text-rustic-green py-3 rounded hover:bg-rustic-green hover:text-white transition uppercase text-sm font-bold tracking-wider">
-                        Xem chi tiết & Đặt phòng
-                    </a>
                 </div>
             </div>
 
-            <div class="room-card group bg-white rounded-lg shadow-lg overflow-hidden border border-gray-100 flex flex-col">
+            <div class="room-card rounded-lg overflow-hidden shadow-lg group">
                 <div class="relative overflow-hidden h-64">
-                    <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Nhà Sàn" class="room-img w-full h-full object-cover">
+                    <img src="https://images.unsplash.com/photo-1555854877-bab0e564b8d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Nhà Sàn Dorm" class="room-img w-full h-full object-cover">
                 </div>
-                <div class="p-6 flex-1 flex flex-col">
-                    <div class="flex justify-between items-baseline mb-2">
-                        <h3 class="text-2xl font-bold text-rustic-dark">Nhà Sàn Dorm</h3>
-                        <span class="text-rustic-green font-bold text-lg">200k<span class="text-xs text-gray-500 font-normal">/người</span></span>
+                <div class="p-6">
+                    <h3 class="text-2xl font-bold text-rustic-dark mb-2">Nhà Sàn Tập Thể</h3>
+                    <div class="flex items-center gap-4 text-sm text-gray-500 mb-4">
+                        <span><i class="fa-solid fa-user-group mr-1"></i> 10 người</span>
+                        <span><i class="fa-solid fa-layer-group mr-1"></i> Giường tầng</span>
                     </div>
-                    <p class="text-gray-500 text-sm mb-4 italic">Đoàn đông người / Backpackers</p>
                     <p class="text-gray-600 mb-6 line-clamp-3">
-                        Không gian sinh hoạt chung ấm cúng. Thích hợp cho các đoàn team building hoặc nhóm phượt muốn tiết kiệm chi phí nhưng vẫn tiện nghi.
+                        Không gian sinh hoạt chung rộng rãi trên nhà sàn truyền thống. Phù hợp cho nhóm bạn đông người hoặc đi phượt muốn tiết kiệm chi phí.
                     </p>
-                    
-                    <div class="flex gap-4 mb-6 text-gray-400 text-sm border-t border-gray-100 pt-4 mt-auto">
-                        <span><i class="fa-solid fa-users"></i> Tối đa 15 người</span>
-                        <span><i class="fa-solid fa-restroom"></i> WC chung sạch đẹp</span>
+                    <div class="flex justify-between items-center border-t border-gray-100 pt-4">
+                        <span class="text-xl font-bold text-rustic-green">200.000₫ <span class="text-sm font-normal text-gray-400">/người</span></span>
+                        <a href="contact.html" class="text-rustic-dark font-bold hover:text-rustic-green transition">Chi tiết &rarr;</a>
                     </div>
-
-                    <a href="contact.html" class="block text-center w-full border border-rustic-green text-rustic-green py-3 rounded hover:bg-rustic-green hover:text-white transition uppercase text-sm font-bold tracking-wider">
-                        Xem chi tiết & Đặt phòng
-                    </a>
                 </div>
             </div>
+
         </div>
     </section>
 
-    <section class="bg-rustic-light/30 py-12 mb-auto">
-        <div class="container mx-auto px-4 max-w-4xl">
-            <h3 class="text-2xl font-bold text-center text-rustic-dark mb-8 font-serif">Lưu Ý Khi Đặt Phòng</h3>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="flex items-start gap-4">
-                    <i class="fa-regular fa-clock text-3xl text-rustic-green mt-1"></i>
-                    <div>
-                        <h4 class="font-bold text-lg">Giờ Check-in / Check-out</h4>
-                        <p class="text-gray-600 text-sm mt-1">
-                            Check-in: 14:00 PM <br>
-                            Check-out: 12:00 PM (trưa hôm sau)
-                        </p>
-                    </div>
-                </div>
-                <div class="flex items-start gap-4">
-                    <i class="fa-solid fa-ban-smoking text-3xl text-rustic-green mt-1"></i>
-                    <div>
-                        <h4 class="font-bold text-lg">Quy định chung</h4>
-                        <p class="text-gray-600 text-sm mt-1">
-                            Không hút thuốc trong phòng ngủ.<br>
-                            Hạn chế tiếng ồn sau 22:00 để giữ yên tĩnh.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="bg-rustic-dark text-white pt-16 pb-8 mt-12" style="font-family: 'Times New Roman', Times, serif;">
-        <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-                <div>
-                    <a href="#" class="text-2xl font-bold flex items-center gap-2 mb-4" style="font-family: 'Playfair Display', serif;">
-                        <i class="fa-solid fa-leaf text-rustic-accent"></i> Floral Farm
-                    </a>
-                    <p class="text-white text-sm leading-relaxed">
-                        Nơi lưu giữ những khoảnh khắc bình yên bên người thân yêu.
-                    </p>
-                </div>
-                <div>
-                    <h4 class="text-lg font-bold mb-4 text-rustic-accent">Liên Hệ</h4>
-                    <ul class="space-y-2 text-white text-sm">
-                        <li><i class="fa-solid fa-phone mr-2"></i> 0984 193 038</li>
-                        <li><i class="fa-solid fa-envelope mr-2"></i> Nguyenvantoikrb@gmail.com</li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-lg font-bold mb-4 text-rustic-accent">Mạng Xã Hội</h4>
-                    <div class="flex space-x-4">
-                        <a href="https://www.facebook.com/Floralfarmstay" class="hover:text-rustic-accent"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="#" class="hover:text-rustic-accent"><i class="fa-brands fa-tiktok"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="border-t border-gray-600 pt-8 text-center text-xs text-gray-400">
+    <footer class="bg-rustic-dark text-white pt-10 pb-6 mt-12">
+        <div class="container mx-auto px-4 text-center">
+            <h4 class="text-2xl font-serif font-bold mb-4 flex justify-center items-center gap-2">
+                <i class="fa-solid fa-leaf text-rustic-green"></i> Floral Farm
+            </h4>
+            <div class="border-t border-gray-600 pt-6 text-xs text-gray-500">
                 &copy; 2025 Floral Farm Stay.
             </div>
         </div>
     </footer>
 
-    <script>
-        const btn = document.getElementById('mobile-menu-btn');
-        const menu = document.getElementById('mobile-menu');
-        btn.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
-        });
-    </script>
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
