@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Floral Farm - Rustic Homestay</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script src="assets/js/tailwind-cfg.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="text-gray-700 antialiased">
+
+    <header id="main-header" class="fixed w-full top-0 z-50 transition-all duration-300 bg-transparent text-white p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-2xl md:text-3xl font-bold tracking-wider flex items-center gap-2">
+                <i class="fa-solid fa-leaf text-rustic-accent"></i> Floral Farm
+            </a>
+
+            <nav class="hidden md:flex space-x-8 items-center text-lg">
+                <a href="index.html" class="hover:text-rustic-accent transition duration-300 border-b-2 border-rustic-accent">Trang Chủ</a>
+                <a href="about.html" class="hover:text-rustic-accent transition duration-300">Về Chúng Tôi</a>
+                <a href="rooms.html" class="hover:text-rustic-accent transition duration-300">Phòng Nghỉ</a>
+                <a href="contact.html" class="hover:text-rustic-accent transition duration-300">Liên Hệ</a>
+                <a href="contact.html" class="bg-rustic-green hover:bg-opacity-90 text-white px-5 py-2 rounded-full text-base transition transform hover:scale-105">
+                    Đặt Phòng Ngay
+                </a>
+            </nav>
+
+            <button id="mobile-menu-btn" class="md:hidden text-2xl focus:outline-none">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-rustic-dark absolute top-full left-0 w-full shadow-lg">
+            <div class="flex flex-col p-4 space-y-4 text-center">
+                <a href="index.html" class="block text-rustic-accent">Trang Chủ</a>
+                <a href="about.html" class="block hover:text-rustic-accent">Về Chúng Tôi</a>
+                <a href="rooms.html" class="block hover:text-rustic-accent">Phòng Nghỉ</a>
+                <a href="contact.html" class="block hover:text-rustic-accent">Liên Hệ</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero-bg h-screen flex items-center justify-center text-center px-4">
+        <div class="text-white max-w-3xl animate-fade-in-up">
+            <p class="text-lg md:text-xl italic mb-4 font-light tracking-widest uppercase">Trở về với thiên nhiên</p>
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+                Tìm Thấy Sự Bình Yên Tại <span class="text-rustic-accent">Floral Farm</span>
+            </h1>
+            <p class="text-lg md:text-xl mb-8 font-light text-gray-200">
+                Nơi những giấc mơ hòa quyện cùng hương hoa và gió núi. Trải nghiệm không gian sống mộc mạc, đậm chất rustic.
+            </p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center">
+                <a href="rooms.html" class="bg-rustic-green text-white px-8 py-3 rounded hover:bg-green-900 transition duration-300 uppercase tracking-wider text-sm font-semibold">
+                    Xem Phòng Nghỉ
+                </a>
+                <a href="about.html" class="border border-white text-white px-8 py-3 rounded hover:bg-white hover:text-rustic-dark transition duration-300 uppercase tracking-wider text-sm font-semibold">
+                    Câu Chuyện Của Chúng Tôi
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-rustic-light/30">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2 relative">
+                    <div class="absolute top-4 left-4 w-full h-full border-2 border-rustic-green rounded-lg transform -translate-x-4 -translate-y-4 z-0 hidden md:block"></div>
+                    <img src="https://images.unsplash.com/photo-1510798831971-661eb04b3739?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Không gian Floral Farm" class="relative z-10 rounded-lg shadow-xl w-full">
+                </div>
+                <div class="md:w-1/2">
+                    <span class="text-rustic-green font-bold uppercase tracking-widest text-sm">Giới thiệu</span>
+                    <h2 class="text-4xl font-bold text-rustic-dark mt-2 mb-6">Chốn Bình Yên Giữa Lòng Đồi Núi</h2>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Floral Farm không chỉ là một nơi để ngủ, mà là nơi để bạn "trốn" khỏi những ồn ào của phố thị. Được xây dựng hoàn toàn từ gỗ tái chế và đá tự nhiên, mỗi góc nhỏ tại đây đều kể một câu chuyện về sự mộc mạc và chân thành.
+                    </p>
+                    <p class="text-gray-600 mb-8 leading-relaxed">
+                        Thức dậy với tiếng chim hót, thưởng thức bữa sáng từ nông sản sạch ngay tại vườn, và thả hồn vào những trang sách bên lò sưởi ấm áp.
+                    </p>
+                    <a href="about.html" class="text-rustic-green font-semibold hover:text-rustic-dark border-b border-rustic-green pb-1 transition">
+                        Đọc thêm về chúng tôi &rarr;
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-[#FDFBF7]">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto relative p-10 md:p-16 bg-white shadow-xl rotate-1 transform transition hover:rotate-0 duration-500 border border-gray-100">
+                <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 w-12 h-12 bg-rustic-accent rounded-full opacity-20 z-0"></div>
+                <div class="absolute -top-3 left-1/2 transform -translate-x-1/2 text-rustic-dark text-2xl z-10">
+                    <i class="fa-solid fa-paperclip"></i>
+                </div>
+
+                <div class="text-center mb-8">
+                    <span class="text-rustic-green text-sm uppercase tracking-widest block mb-2">Lời Nhắn Gửi</span>
+                    <h3 class="text-3xl font-serif text-rustic-dark italic">Gửi những tâm hồn đi lạc...</h3>
+                </div>
+
+                <div class="text-gray-600 text-lg leading-relaxed font-body italic space-y-6 text-justify md:text-center">
+                    <p>
+                        "Chào bạn, người đang tìm kiếm một khoảng lặng giữa những bộn bề."
+                    </p>
+                    <p>
+                        Floral Farm không được xây dựng bởi những kiến trúc sư lừng danh, mà được vun đắp từ đôi bàn tay của chúng mình - những kẻ mộng mơ trót yêu màu xanh của núi rừng Buôn Ma Thuột, Đắk Lắk. Từng thanh gỗ, viên đá ở đây đều thấm đẫm mồ hôi và cả những nụ cười trong những ngày mưa nắng để dựng nên "ngôi nhà" này.
+                    </p>
+                    <p>
+                        Ở đây không có sự xa hoa lộng lẫy, tivi màn hình lớn hay điều hòa hiện đại. Chỉ có tiếng gió reo qua đồi thông, mùi hương thảo mộc buổi sớm và hơi ấm từ những tách trà gừng nóng hổi. Chúng mình mong Floral Farm sẽ là nơi bạn trút bỏ mọi âu lo ngoài cánh cổng, để thực sự "sống" chậm lại.
+                    </p>
+                </div>
+
+                <div class="mt-10 text-center">
+                    <div class="w-16 h-1 bg-rustic-accent mx-auto mb-4"></div>
+                    <p class="font-serif font-bold text-xl text-rustic-dark">Thân thương,</p>
+                    <p class="text-rustic-green mt-1 font-medium">Đội ngũ Floral Farm</p>
+                </div>
+
+                <div class="absolute top-0 left-0 p-4 opacity-20 pointer-events-none">
+                    <i class="fa-brands fa-envira text-4xl text-rustic-green"></i>
+                </div>
+                <div class="absolute bottom-0 right-0 p-4 opacity-20 pointer-events-none">
+                    <i class="fa-brands fa-envira text-4xl text-rustic-green transform rotate-180"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="p-6">
+                    <i class="fa-solid fa-tree text-4xl text-rustic-green mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Gần Gũi Thiên Nhiên</h3>
+                    <p class="text-sm text-gray-500">Bao quanh bởi rừng thông và vườn hoa.</p>
+                </div>
+                <div class="p-6">
+                    <i class="fa-solid fa-mug-hot text-4xl text-rustic-green mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Cafe & Trà Đạo</h3>
+                    <p class="text-sm text-gray-500">Thưởng thức đồ uống organic tại chỗ.</p>
+                </div>
+                <div class="p-6">
+                    <i class="fa-solid fa-wifi text-4xl text-rustic-green mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Wifi Tốc Độ Cao</h3>
+                    <p class="text-sm text-gray-500">Làm việc từ xa giữa thiên nhiên.</p>
+                </div>
+                <div class="p-6">
+                    <i class="fa-solid fa-fire text-4xl text-rustic-green mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Tiệc BBQ Ngoài Trời</h3>
+                    <p class="text-sm text-gray-500">Không gian ấm cúng cho buổi tối.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-rustic-green text-white relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10" style="background-image: url('https://www.transparenttextures.com/patterns/wood-pattern.png');"></div>
+        <div class="container mx-auto px-4 text-center relative z-10">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Sẵn sàng cho kỳ nghỉ trong mơ?</h2>
+            <p class="text-lg mb-8 opacity-90">Đặt phòng trực tiếp trên website để nhận ưu đãi giảm 10% và miễn phí bữa sáng.</p>
+            <a href="contact.html" class="bg-white text-rustic-green px-10 py-4 rounded-full font-bold text-lg hover:bg-rustic-accent hover:text-white transition shadow-lg inline-block transform hover:-translate-y-1">
+                Liên Hệ Đặt Phòng Ngay
+            </a>
+        </div>
+    </section>
+
+    <footer class="bg-rustic-dark text-white pt-16 pb-8" style="font-family: 'Times New Roman', Times, serif;">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <a href="#" class="text-2xl font-bold flex items-center gap-2 mb-4" style="font-family: 'Playfair Display', serif;">
+                        <i class="fa-solid fa-leaf text-rustic-accent"></i> Floral Farm
+                    </a>
+                    <p class="text-white text-sm leading-relaxed">
+                        Nơi lưu giữ những khoảnh khắc bình yên bên người thân yêu. Thiết kế mộc mạc, dịch vụ tận tâm.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4 text-rustic-accent">Thông Tin</h4>
+                    <ul class="space-y-2 text-white text-sm">
+                        <li><i class="fa-solid fa-location-dot mr-2"></i> Đội 5, Thôn 1, Buôn Sut Mgrư, Cư M'gar, Buôn Ma Thuột, Việt Nam</li>
+                        <li><i class="fa-solid fa-phone mr-2"></i> 0984 193 038</li>
+                        <li><i class="fa-solid fa-envelope mr-2"></i> Nguyenvantoikrb@gmail.com</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4 text-rustic-accent">Theo Dõi</h4>
+                    <div class="flex space-x-4">
+                        <a href="https://www.facebook.com/Floralfarmstay" target="_blank" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-rustic-accent transition"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/floralfarmstay/?hl=en" target="_blank" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-rustic-accent transition"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.tiktok.com/@.y.c.home.xinh" target="_blank" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-rustic-accent transition"><i class="fa-brands fa-tiktok"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-600 pt-8 text-center text-white text-sm">
+                &copy; 2024 Floral Farm Homestay. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

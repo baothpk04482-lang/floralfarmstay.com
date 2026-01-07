@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Về Chúng Tôi - Câu Chuyện Floral Farm</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script src="assets/js/tailwind-cfg.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="text-gray-700 antialiased flex flex-col min-h-screen">
+
+    <header id="main-header" class="fixed w-full top-0 z-50 bg-rustic-dark shadow-md text-white py-2 px-4 transition-all">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-2xl md:text-3xl font-bold tracking-wider flex items-center gap-2">
+                <i class="fa-solid fa-leaf text-rustic-accent"></i> Floral Farm
+            </a>
+            <nav class="hidden md:flex space-x-8 items-center text-lg">
+                <a href="index.html" class="hover:text-rustic-accent transition duration-300">Trang Chủ</a>
+                <a href="about.html" class="text-rustic-accent border-b-2 border-rustic-accent transition duration-300">Về Chúng Tôi</a>
+                <a href="rooms.html" class="hover:text-rustic-accent transition duration-300">Phòng Nghỉ</a>
+                <a href="contact.html" class="hover:text-rustic-accent transition duration-300">Liên Hệ</a>
+                <a href="contact.html" class="bg-rustic-green hover:bg-opacity-90 text-white px-5 py-2 rounded-full text-base transition transform hover:scale-105">
+                    Đặt Phòng
+                </a>
+            </nav>
+            <button id="mobile-menu-btn" class="md:hidden text-2xl focus:outline-none">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-rustic-dark absolute top-full left-0 w-full shadow-lg border-t border-gray-700">
+            <div class="flex flex-col p-4 space-y-4 text-center">
+                <a href="index.html" class="block hover:text-rustic-accent">Trang Chủ</a>
+                <a href="about.html" class="block text-rustic-accent font-bold">Về Chúng Tôi</a>
+                <a href="rooms.html" class="block hover:text-rustic-accent">Phòng Nghỉ</a>
+                <a href="contact.html" class="block hover:text-rustic-accent">Liên Hệ</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="pt-32 pb-16 bg-rustic-light/50 text-center px-4 relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none" style="background-image: url('https://www.transparenttextures.com/patterns/flower-pattern.png');"></div>
+        <h1 class="text-4xl md:text-5xl font-bold text-rustic-dark mb-4">Chuyện Của Farm</h1>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto italic">
+            "Từ một mảnh đồi hoang sơ đến ngôi nhà chung của những kẻ mộng mơ."
+        </p>
+    </section>
+
+    <section class="py-16 container mx-auto px-4">
+        <div class="flex flex-col md:flex-row items-center gap-12">
+            <div class="md:w-1/2 relative">
+                <div class="relative h-96 w-full flex justify-center items-center">
+                    <div class="polaroid absolute top-0 left-10 w-64 bg-white p-2 shadow-lg z-10">
+                        <img src="https://images.unsplash.com/photo-1595878715977-2a8f87414994?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Những ngày đầu" class="w-full">
+                        <p class="text-center text-xs text-gray-400 mt-2 font-handwriting">Những ngày đầu khai phá</p>
+                    </div>
+                    <div class="polaroid absolute bottom-0 right-10 w-64 bg-white p-2 shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Trồng hoa" class="w-full">
+                        <p class="text-center text-xs text-gray-400 mt-2 font-handwriting">Mùa hoa đầu tiên</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="md:w-1/2 space-y-6">
+                <h2 class="text-3xl font-bold text-rustic-green">Khởi Nguồn</h2>
+                <p class="text-gray-600 leading-relaxed text-justify">
+                    Cách đây 3 năm, chúng mình vẫn là những nhân viên văn phòng, sáng đi tối về giữa Sài Gòn tấp nập. Nhưng tiếng gọi của đại ngàn Đắk Lắk chưa bao giờ ngừng thôi thúc.
+                </p>
+                <p class="text-gray-600 leading-relaxed text-justify">
+                    Floral Farm bắt đầu từ một mảnh đồi chỉ toàn cỏ dại. Chúng mình đã dành hàng nghìn giờ để tự tay san đất, dựng từng căn nhà gỗ và gieo những hạt giống hoa đầu tiên.
+                </p>
+                <p class="text-gray-600 leading-relaxed text-justify italic font-semibold border-l-4 border-rustic-accent pl-4">
+                    "Chúng mình không xây khách sạn 5 sao. Chúng mình xây một ngôi nhà, nơi khách đến chơi như người thân trở về."
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-rustic-green py-20 text-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Triết Lý Của Farm</h2>
+                <div class="w-20 h-1 bg-rustic-accent mx-auto"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div class="p-6 bg-white/10 rounded-lg backdrop-blur-sm hover:bg-white/20 transition duration-300">
+                    <div class="w-16 h-16 bg-white text-rustic-green rounded-full flex items-center justify-center text-3xl mx-auto mb-6">
+                        <i class="fa-solid fa-leaf"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Thuận Tự Nhiên</h3>
+                    <p class="text-gray-200 text-sm opacity-90">
+                        Không bê tông hóa. Chúng mình giữ lại từng gốc cây cổ thụ và sử dụng vật liệu thân thiện với môi trường.
+                    </p>
+                </div>
+
+                <div class="p-6 bg-white/10 rounded-lg backdrop-blur-sm hover:bg-white/20 transition duration-300">
+                    <div class="w-16 h-16 bg-white text-rustic-green rounded-full flex items-center justify-center text-3xl mx-auto mb-6">
+                        <i class="fa-solid fa-seedling"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Nông Sản Sạch</h3>
+                    <p class="text-gray-200 text-sm opacity-90">
+                        Mọi bữa ăn tại Farm đều dùng rau củ tự trồng tại vườn và nông sản sạch từ bà con buôn làng xung quanh.
+                    </p>
+                </div>
+
+                <div class="p-6 bg-white/10 rounded-lg backdrop-blur-sm hover:bg-white/20 transition duration-300">
+                    <div class="w-16 h-16 bg-white text-rustic-green rounded-full flex items-center justify-center text-3xl mx-auto mb-6">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Kết Nối & Sẻ Chia</h3>
+                    <p class="text-gray-200 text-sm opacity-90">
+                        Farm thường xuyên tổ chức workshop, đêm nhạc acoustic để mọi người xích lại gần nhau hơn.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4 text-center">
+            <div class="max-w-3xl mx-auto">
+                <div class="w-32 h-32 mx-auto rounded-full overflow-hidden border-4 border-rustic-accent mb-6 shadow-xl">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Host" class="w-full h-full object-cover">
+                </div>
+                <h3 class="text-2xl font-bold text-rustic-dark mb-1">Mr. Tới & Team</h3>
+                <p class="text-rustic-green text-sm font-bold uppercase tracking-widest mb-6">Người sáng lập</p>
+                
+                <p class="text-xl italic text-gray-600 font-serif leading-relaxed">
+                    "Hạnh phúc đôi khi chỉ là được nhìn thấy nụ cười của khách khi hít căng lồng ngực bầu không khí trong lành buổi sớm mai. Hãy ghé Farm, uống tách trà và kể mình nghe câu chuyện của bạn nhé!"
+                </p>
+                
+                <div class="mt-8">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Signature_sample.svg/1200px-Signature_sample.svg.png" alt="Chữ ký" class="h-12 mx-auto opacity-50">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-10 bg-rustic-light/20">
+        <div class="container mx-auto px-4">
+            <h3 class="text-center text-2xl font-bold text-rustic-dark mb-8">Góc Nhỏ Bình Yên</h3>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <img src="https://images.unsplash.com/photo-1582650625119-3a31f8fa2699?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" class="rounded-lg shadow hover:opacity-90 transition h-48 w-full object-cover">
+                <img src="https://images.unsplash.com/photo-1544965838-54ef8406f868?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" class="rounded-lg shadow hover:opacity-90 transition h-48 w-full object-cover">
+                <img src="https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" class="rounded-lg shadow hover:opacity-90 transition h-48 w-full object-cover">
+                <img src="https://images.unsplash.com/photo-1596436889106-be35e843f974?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" class="rounded-lg shadow hover:opacity-90 transition h-48 w-full object-cover">
+            </div>
+            <div class="text-center mt-10">
+                <a href="contact.html" class="inline-block border-b-2 border-rustic-dark text-rustic-dark font-bold hover:text-rustic-accent hover:border-rustic-accent transition pb-1">Ghé thăm chúng mình ngay &rarr;</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-rustic-dark text-white pt-10 pb-6">
+        <div class="container mx-auto px-4 text-center">
+            <h4 class="text-2xl font-serif font-bold mb-4 flex justify-center items-center gap-2">
+                <i class="fa-solid fa-leaf text-rustic-accent"></i> Floral Farm
+            </h4>
+            <div class="border-t border-gray-600 pt-6 text-xs text-gray-500">
+                &copy; 2025 Floral Farm Stay.
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
