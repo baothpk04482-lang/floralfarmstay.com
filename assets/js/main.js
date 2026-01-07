@@ -16,8 +16,6 @@ if (header) {
             header.classList.remove('bg-transparent', 'p-4');
             header.classList.add('bg-rustic-dark', 'shadow-md', 'py-2');
         } else {
-            // Chỉ áp dụng trong suốt cho trang chủ (index.html)
-            // Các trang khác header luôn tối nên ta check xem có class hero-bg không
             if (document.querySelector('.hero-bg')) {
                 header.classList.add('bg-transparent', 'p-4');
                 header.classList.remove('bg-rustic-dark', 'shadow-md', 'py-2');
@@ -45,30 +43,42 @@ if (bookingForm) {
     });
 }
 
-// 4. XỬ LÝ NÚT ĐỔI THEME SÁNG/TỐI (MỚI)
-const themeBtn = document.getElementById('theme-toggle');
-const htmlTag = document.documentElement; // Thẻ <html>
+// 4. XỬ LÝ ĐỔI THEME (CẢ MOBILE VÀ DESKTOP)
+const themeBtnDesktop = document.getElementById('theme-toggle');
+const themeBtnMobile = document.getElementById('theme-toggle-mobile');
+const htmlTag = document.documentElement;
 
-// Kiểm tra xem người dùng đã từng chọn dark mode chưa
-if (localStorage.getItem('theme') === 'dark') {
+// Hàm cập nhật icon cho cả 2 nút cùng lúc
+function updateThemeIcons(isDark) {
+    const iconClass = isDark ? 'fa-sun' : 'fa-moon';
+    // Update nút Desktop
+    if (themeBtnDesktop) {
+        themeBtnDesktop.innerHTML = `<i class="fa-solid ${iconClass}"></i>`;
+    }
+    // Update nút Mobile (Có thêm chữ)
+    if (themeBtnMobile) {
+        const text = isDark ? 'Giao diện Sáng' : 'Giao diện Tối';
+        themeBtnMobile.innerHTML = `<span>${text}</span> <i class="fa-solid ${iconClass}"></i>`;
+    }
+}
+
+// Hàm chuyển đổi theme
+function toggleTheme() {
+    const currentTheme = htmlTag.getAttribute('data-theme');
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    
+    htmlTag.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+    updateThemeIcons(newTheme === 'dark');
+}
+
+// Kiểm tra trạng thái cũ khi tải trang
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme === 'dark') {
     htmlTag.setAttribute('data-theme', 'dark');
-    if(themeBtn) themeBtn.innerHTML = '<i class="fa-solid fa-sun"></i>';
+    updateThemeIcons(true);
 }
 
-if (themeBtn) {
-    themeBtn.addEventListener('click', () => {
-        const currentTheme = htmlTag.getAttribute('data-theme');
-        
-        if (currentTheme === 'dark') {
-            // Chuyển sang Sáng
-            htmlTag.setAttribute('data-theme', 'light');
-            themeBtn.innerHTML = '<i class="fa-solid fa-moon"></i>';
-            localStorage.setItem('theme', 'light'); // Lưu lại lựa chọn
-        } else {
-            // Chuyển sang Tối
-            htmlTag.setAttribute('data-theme', 'dark');
-            themeBtn.innerHTML = '<i class="fa-solid fa-sun"></i>';
-            localStorage.setItem('theme', 'dark'); // Lưu lại lựa chọn
-        }
-    });
-}
+// Gắn sự kiện click cho cả 2 nút
+if (themeBtnDesktop) themeBtnDesktop.addEventListener('click', toggleTheme);
+if (themeBtnMobile) themeBtnMobile.addEventListener('click', toggleTheme);
