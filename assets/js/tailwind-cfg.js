@@ -1,20 +1,35 @@
 tailwind.config = {
+    // 1. KÍCH HOẠT DARK MODE (Quan trọng: Dựa vào data-theme="dark")
+    darkMode: ['class', '[data-theme="dark"]'],
+
     theme: {
         extend: {
+            // 2. CẦU NỐI MÀU SẮC (Giữ nguyên ý tưởng của bạn)
             colors: {
-                /* ĐÂY LÀ CẦU NỐI QUAN TRỌNG */
-                /* Chúng ta map các tên class cũ (rustic-...) vào các biến màu mới của style.css */
                 rustic: {
-                    light: 'var(--light-mint)',   /* Class cũ bg-rustic-light -> Sẽ thành màu Xanh nhạt mới */
-                    DEFAULT: 'var(--dark-green)', /* Class cũ bg-rustic -> Sẽ thành màu Xanh rừng già */
-                    dark: 'var(--footer-bg)',     /* Class cũ bg-rustic-dark -> Sẽ thành màu nền Footer tối */
-                    green: 'var(--primary-mint)', /* Class cũ bg-rustic-green -> Sẽ thành màu Xanh Bạc Hà (Nút bấm) */
-                    accent: 'var(--accent-gold)'  /* Class cũ text-rustic-accent -> Sẽ thành màu Vàng Kim */
+                    light: 'var(--light-mint)',   /* Xanh nhạt */
+                    DEFAULT: 'var(--dark-green)', /* Xanh rừng già */
+                    dark: 'var(--footer-bg)',     /* Nền tối */
+                    green: 'var(--primary-mint)', /* Nút bấm (Mint) */
+                    accent: 'var(--accent-gold)'  /* Vàng kim */
                 }
             },
+            
+            // 3. FONT CHỮ
             fontFamily: {
                 serif: ['"Playfair Display"', 'serif'],
                 body: ['"Lora"', 'serif'],
+            },
+
+            // 4. HIỆU ỨNG ĐỘNG (Lấy từ index.html sang)
+            animation: {
+                'fade-in-up': 'fadeInUp 1s ease-out forwards',
+            },
+            keyframes: {
+                fadeInUp: {
+                    '0%': { opacity: '0', transform: 'translateY(20px)' },
+                    '100%': { opacity: '1', transform: 'translateY(0)' },
+                }
             }
         }
     }
